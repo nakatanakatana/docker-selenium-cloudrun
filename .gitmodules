@@ -1,0 +1,3 @@
+[submodule "selenium"]
+	path = selenium
+	url = git@github.com:SeleniumHQ/selenium.git

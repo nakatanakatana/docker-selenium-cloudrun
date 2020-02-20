@@ -1,0 +1,13 @@
+diff --git a/java/client/src/org/openqa/selenium/net/LinuxEphemeralPortRangeDetector.java b/java/client/src/org/openqa/selenium/net/LinuxEphemeralPortRangeDetector.java
+index 2579f140a7..c13cdfc340 100644
+--- a/java/client/src/org/openqa/selenium/net/LinuxEphemeralPortRangeDetector.java
++++ b/java/client/src/org/openqa/selenium/net/LinuxEphemeralPortRangeDetector.java
+@@ -46,7 +46,7 @@ public static LinuxEphemeralPortRangeDetector getInstance() {
+     int lowPort = defaultRange.getLowestEphemeralPort();
+     int highPort = defaultRange.getHighestEphemeralPort();
+     try (BufferedReader in = new BufferedReader(inputFil)) {
+-      String[] split = in.readLine().split("\\s");
++      String[] split = in.readLine().split("\\s+");
+       lowPort = Integer.parseInt(split[0]);
+       highPort = Integer.parseInt(split[1]);
+     } catch (IOException ignore) {
